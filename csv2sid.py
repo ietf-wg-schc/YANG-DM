@@ -41,8 +41,8 @@ def take_from_allocation(sid, namespace, identifier):
 new_items = []
 unknown_items =[]
 
-for i in range(len(sid_module["items"])):
-    item = sid_module["items"].pop(0)
+for i in range(len(sid_module["ietf-sid-file:sid-file"]["item"])):
+    item = sid_module["ietf-sid-file:sid-file"]["item"].pop(0)
     result = take_from_allocation(item["sid"], item["namespace"], item["identifier"])
     if result != None:
         #print (f"{item['identifier']:30}:{item['sid']:6} ==> {result[0]:6}")
@@ -54,11 +54,11 @@ for i in range(len(sid_module["items"])):
     else:
         unknown_items.append(item)
 
-sid_module["items"] = new_items
+sid_module["ietf-sid-file:sid-file"]["item"] = new_items
 
 with open(sid_final, "w") as output_file:
         json.dump(sid_module, output_file, indent=4)
 
 if len(unknown_items) > 0:
-    print("Transposition Not complete, unknown items:")
+    print("Transposition not fully complete, unknown items:")
     pprint.pprint (unknown_items)

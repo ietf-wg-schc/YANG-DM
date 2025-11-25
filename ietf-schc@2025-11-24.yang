@@ -1365,6 +1365,19 @@ module ietf-schc {
          through a field-id, its position in the packet, and
          its direction.";
     }
+    list universal-option-entry {
+      must "derived-from-or-self(../rule-nature,
+                                        'nature-compression')" {
+        error-message "Rule nature must be compression";
+      }
+      key "space-id option-id field-position direction-indicator";
+      uses universal-options-entry;
+      description
+        "A compression Rule may also contain Universal Options
+         entries, each describing a universal option field.
+         An entry is identified through a space-id, option-id,
+         its position in the packet, and its direction.";
+    }
     description
       "Define a compression Rule composed of a list of entries.";
     reference

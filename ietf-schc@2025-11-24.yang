@@ -56,14 +56,6 @@ module ietf-schc {
      operations in fields.
      This data model applies to both compression and fragmentation.";
 
-  revision 2023-03-01 {
-    description
-      "Initial version from RFC 9363.";
-    reference
-      "RFC 9363 A YANG Data Model for Static Context Header
-                Compression (SCHC)";
-  }
-
   revision 2025-11-24 {
     description
       "This version includes new developments in the SCHC architecture
@@ -84,6 +76,16 @@ module ietf-schc {
        RFC 9441  Static Context Header Compression (SCHC) 
                 Compound Acknowledgement (ACK)";
   }
+
+  revision 2023-03-01 {
+    description
+      "Initial version from RFC 9363.";
+    reference
+      "RFC 9363 A YANG Data Model for Static Context Header
+                Compression (SCHC)";
+  }
+
+
   feature compression {
     description
       "SCHC compression capabilities are taken into account.";

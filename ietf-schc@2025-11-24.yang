@@ -1452,7 +1452,7 @@ module ietf-schc {
         leaf bitmap-format {
           when "derived-from-or-self(../fragmentation-mode,
                             'fragmentation-mode-ack-on-error')";
-          type schc-compound-ack:bitmap-format-type;
+          type bitmap-format-type;
           default "bitmap-RFC8724";
           description
             "How the bitmaps are included in the SCHC ACK message.

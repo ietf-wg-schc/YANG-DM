@@ -112,8 +112,8 @@
 2661;data;/ietf-schc:schc/rule/w-size;"""RFC9363""";
 2662;data;/ietf-schc:schc/rule/direction;"""RFC9363""";
 2663;data;/ietf-schc:schc/rule/fragmentation-mode;"""RFC9363""";
-2664;data;/ietf-schc:schc/rule/ietf-schc-compound-ack:bitmap-format;"""RFC9441""";
-2665;data ;/ietf-schc:schc/rule/ietf-schc-compound-ack:last-bitmap-compression;"""RFC9441""";
+2664;data;/ietf-schc:schc/rule/bitmap-format;"""RFC9441""";
+2665;data ;/ietf-schc:schc/rule/last-bitmap-compression;"""RFC9441""";
 2666;;;;
 2667;;;;
 2668;;;;

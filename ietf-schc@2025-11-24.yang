@@ -1221,10 +1221,11 @@ module ietf-schc {
 
   grouping universal-options-entry {
       leaf space-id {
-      type space-type;
-      mandatory true;
-      description
-        "";
+        type schc:space-type;
+        mandatory true;
+        description
+          "Space ID, identify a field space with a YANG identity 
+          reference.";
     }
     leaf option-id {
       type uint32;

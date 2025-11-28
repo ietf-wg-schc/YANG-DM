@@ -1,0 +1,45 @@
+{
+  "ietf-sid-file:sid-file": {
+    "module-name": "ietf-schc-quentin",
+    "module-revision": "2025-03-21",
+    "sid-file-status": "unpublished",
+    "dependency-revision": [
+      {
+        "module-name": "ietf-schc",
+        "module-revision": "2025-11-24"
+      }
+    ],
+    "assignment-range": [
+      {
+        "entry-point": "3013680000",
+        "size": "100"
+      }
+    ],
+    "item": [
+      {
+        "namespace": "module",
+        "identifier": "ietf-schc-quentin",
+        "status": "unstable",
+        "sid": "3013680000"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-delta-types",
+        "status": "unstable",
+        "sid": "3013680001"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-length",
+        "status": "unstable",
+        "sid": "3013680002"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-value",
+        "status": "unstable",
+        "sid": "3013680003"
+      }
+    ]
+  }
+}

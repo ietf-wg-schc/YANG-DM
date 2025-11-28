@@ -580,10 +580,20 @@ module ietf-schc {
                 Section 6.4)";
   }
 
-   identity fid-icmpv6-type {
-   base fid-icmpv6-base-type;
+ identity fid-icmpv6-base-type {
+   base schc:fid-base-type;
    description
-     "ICMPv6 code field present in all ICMPv6 messages.";
+     "Field IP base type for ICMPv6 headers described in RFC 4443";
+   reference
+     "RFC 4443   Internet Control Message Protocol (ICMPv6)
+                 for the Internet Protocol Version 6 (IPv6)
+                 Specification";
+ }
+ 
+  identity fid-icmpv6-type {
+    base fid-icmpv6-base-type;
+    description
+      "ICMPv6 code field present in all ICMPv6 messages.";
  }
 
  identity fid-icmpv6-code {
@@ -893,7 +903,7 @@ module ietf-schc {
      "Send a compressed version of TV reversing UP and
       DOWN direction.";
  }
- 
+
   // -- type definition
 
   typedef fid-type {

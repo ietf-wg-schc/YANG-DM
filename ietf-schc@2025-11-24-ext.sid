@@ -72,6 +72,12 @@
             },
             {
                 "namespace": "identity",
+                "identifier": "cda-compress-sent",
+                "status": "unstable",
+                "sid": 2901
+            },
+            {
+                "namespace": "identity",
                 "identifier": "cda-compute",
                 "status": "unstable",
                 "sid": 2895
@@ -99,6 +105,12 @@
                 "identifier": "cda-not-sent",
                 "status": "unstable",
                 "sid": 2899
+            },
+            {
+                "namespace": "identity",
+                "identifier": "cda-rev-compress-sent",
+                "status": "unstable",
+                "sid": 2902
             },
             {
                 "namespace": "identity",
@@ -201,6 +213,54 @@
                 "identifier": "fid-coap-version",
                 "status": "unstable",
                 "sid": 2844
+            },
+            {
+                "namespace": "identity",
+                "identifier": "fid-icmpv6-base-type",
+                "status": "unstable",
+                "sid": 2805
+            },
+            {
+                "namespace": "identity",
+                "identifier": "fid-icmpv6-checksum",
+                "status": "unstable",
+                "sid": 2806
+            },
+            {
+                "namespace": "identity",
+                "identifier": "fid-icmpv6-code",
+                "status": "unstable",
+                "sid": 2807
+            },
+            {
+                "namespace": "identity",
+                "identifier": "fid-icmpv6-identifier",
+                "status": "unstable",
+                "sid": 2808
+            },
+            {
+                "namespace": "identity",
+                "identifier": "fid-icmpv6-mtu",
+                "status": "unstable",
+                "sid": 2809
+            },
+            {
+                "namespace": "identity",
+                "identifier": "fid-icmpv6-payload",
+                "status": "unstable",
+                "sid": 2810
+            },
+            {
+                "namespace": "identity",
+                "identifier": "fid-icmpv6-pointer",
+                "status": "unstable",
+                "sid": 2811
+            },
+            {
+                "namespace": "identity",
+                "identifier": "fid-icmpv6-sequence",
+                "status": "unstable",
+                "sid": 2812
             },
             {
                 "namespace": "identity",
@@ -363,6 +423,18 @@
                 "identifier": "mo-msb",
                 "status": "unstable",
                 "sid": 2911
+            },
+            {
+                "namespace": "identity",
+                "identifier": "mo-rev-rule-match",
+                "status": "unstable",
+                "sid": 2912
+            },
+            {
+                "namespace": "identity",
+                "identifier": "mo-rule-match",
+                "status": "unstable",
+                "sid": 2913
             },
             {
                 "namespace": "identity",

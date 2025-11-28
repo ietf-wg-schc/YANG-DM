@@ -579,6 +579,58 @@ module ietf-schc {
                 Constrained Application Protocol (CoAP)(see
                 Section 6.4)";
   }
+
+   identity fid-icmpv6-type {
+   base fid-icmpv6-base-type;
+   description
+     "ICMPv6 code field present in all ICMPv6 messages.";
+ }
+
+ identity fid-icmpv6-code {
+   base fid-icmpv6-base-type;
+   description
+     "ICMPv6 code field present in all ICMPv6 messages.";
+ }
+
+ identity fid-icmpv6-checksum {
+   base fid-icmpv6-base-type;
+   description
+     "ICMPv6 checksum field present in all ICMPv6 messages.";
+ }
+
+ identity fid-icmpv6-mtu {
+   base fid-icmpv6-base-type;
+   description
+     "ICMPv6 MTU, present in Packet Too Big message.";
+ }
+
+ identity fid-icmpv6-pointer {
+   base fid-icmpv6-base-type;
+   description
+     "ICMPv6 Pointer, present in Parameter Problem message.";
+ }
+
+ identity fid-icmpv6-identifier {
+   base fid-icmpv6-base-type;
+   description
+     "ICMPv6 identifier field, present in Echo Request/Reply
+     message.";
+ }
+
+ identity fid-icmpv6-sequence {
+   base fid-icmpv6-base-type;
+   description
+     "ICMPv6 sequence number field, present in Echo Request/Reply
+      message.";
+ }
+
+ identity fid-icmpv6-payload {
+   base fid-icmpv6-base-type;
+   description
+     "ICMPv6 payload following ICMPv6 header.
+      If payload is empty, this field exists with a length of 0.";
+ }
+
   //----------------------------------
   // Universal Option space IDs
   //----------------------------------
@@ -699,6 +751,7 @@ module ietf-schc {
                 Header Compression and Fragmentation (see
                 Section 7.3)";
   }
+  
 
   identity mo-ignore {
     base mo-base-type;
@@ -730,6 +783,19 @@ module ietf-schc {
                 Section 7.3)";
   }
 
+  identity mo-rule-match {
+    base schc:mo-base-type;
+    description
+      "Macthing operator return true, if the TV matches a rule
+        keeping UP and DOWN direction.";
+ }
+
+ identity mo-rev-rule-match {
+   base schc:mo-base-type;
+   description
+     "Macthing operator return true, if the TV matches a rule
+      reversing UP and DOWN direction.";
+ }
   //------------------------------
   // CDA type definition
   //------------------------------
@@ -814,6 +880,20 @@ module ietf-schc {
                 Section 7.4)";
   }
 
+ identity cda-compress-sent {
+   base schc:mo-base-type;
+   description
+     "Send a compressed version of TV keeping UP and
+      DOWN direction.";
+ }
+
+ identity cda-rev-compress-sent {
+   base schc:mo-base-type;
+   description
+     "Send a compressed version of TV reversing UP and
+      DOWN direction.";
+ }
+ 
   // -- type definition
 
   typedef fid-type {

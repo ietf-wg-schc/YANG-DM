@@ -261,7 +261,7 @@
 2810;identity;fid-icmpv6-payload;"""icmpv6""";
 2811;identity;fid-icmpv6-pointer;"""icmpv6""";
 2812;identity;fid-icmpv6-sequence;"""icmpv6""";
-2813;identity;fid-icmpv6-type;"""icmpv6""";
+2813;;;;
 2814;;;;
 2815;;;;
 2816;;;;

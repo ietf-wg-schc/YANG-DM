@@ -216,12 +216,6 @@
             },
             {
                 "namespace": "identity",
-                "identifier": "fid-icmpv6-base-type",
-                "status": "unstable",
-                "sid": 2805
-            },
-            {
-                "namespace": "identity",
                 "identifier": "fid-icmpv6-checksum",
                 "status": "unstable",
                 "sid": 2806
@@ -261,6 +255,12 @@
                 "identifier": "fid-icmpv6-sequence",
                 "status": "unstable",
                 "sid": 2812
+            },
+            {
+                "namespace": "identity",
+                "identifier": "fid-icmpv6-type",
+                "status": "unstable",
+                "sid": 2805
             },
             {
                 "namespace": "identity",

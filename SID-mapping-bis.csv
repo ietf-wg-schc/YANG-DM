@@ -253,7 +253,7 @@
 2802;;;;
 2803;;;;
 2804;;;;
-2805;identity;fid-icmpv6-base-type;"""icmpv6""";
+2805;identity;fid-icmpv6-type;"""icmpv6""";
 2806;identity;fid-icmpv6-checksum;"""icmpv6""";
 2807;identity;fid-icmpv6-code;"""icmpv6""";
 2808;identity;fid-icmpv6-identifier;"""icmpv6""";

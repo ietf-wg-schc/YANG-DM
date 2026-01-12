@@ -56,6 +56,22 @@ module ietf-schc {
      operations in fields.
      This data model applies to both compression and fragmentation.";
 
+  revision 2026-01-12 {
+    description 
+    "test module to unify universal option and regular entries:
+    - all options are identified with a space-id and an option-id.
+      For regular fields like fid-ipv6-version the space-id is set 
+      to 0.
+    - the entries are identified by an index, reducing the keys to
+      a single element.
+    - introduction of a new function to define the length. This option
+      takes an entry-index as parameter to refer to a field indicating
+      length.
+      for instance fl-token-length is now equivalent to:
+      fl-length_byte(index) where index refers to an entry-index for 
+      TKL field."
+  }
+
   revision 2025-11-24 {
     description
       "This version includes new developments in the SCHC architecture

@@ -722,7 +722,7 @@ module ietf-schc {
     by its index in bytes. This is a generalation of fl-token-length.";
   }
 
-  identity fl-length-bytes {
+  identity fl-length-bits {
     base fl-base-type;
 
     description "This function return the length in bits of a field 

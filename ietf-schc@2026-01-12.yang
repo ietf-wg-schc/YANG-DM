@@ -715,6 +715,12 @@ module ietf-schc {
                 Section 4.5)";
   }
 
+  identity fl_length_bytes {
+    base fl-base-type;
+
+    description "";
+  }
+
   //---------------------------------
   // Direction Indicator type
   //---------------------------------
@@ -1195,12 +1201,15 @@ module ietf-schc {
   grouping compression-rule-entry {
     description
       "These entries define a compression entry (i.e., a line),
-       as defined in RFC 8724.
-   +-------+--+--+--+------------+-----------------+---------------+
-   |Field 1|FL|FP|DI|Target Value|Matching Operator|Comp/Decomp Act|
-   +-------+--+--+--+------------+-----------------+---------------+
+       as defined in RFC 8724. The format has been generalized
+       to include universal options.
+ 
        An entry in a compression Rule is composed of 7 elements:
-       - Field ID: the header field to be compressed
+       - entry_index: position in the rule.
+       - space ID: 0 for fields defined by SCHC, or protocol ID
+       - Field ID: the header field to be compressed for fields
+         defined by SCHC, otherwise when space ID refers to a 
+         specific protocol, the option ID.
        - Field Length : either a positive integer or a function
        - Field Position: a positive (and possibly equal to 0)
          integer
@@ -1213,6 +1222,22 @@ module ietf-schc {
        - Comp./Decomp. Action: the compression or decompression
          action and optional parameters
       ";
+
+    leaf entry-index {
+      type uint16;
+
+      description 
+        "position in the rule";
+    }
+
+    leaf space-id {
+        type schc:space-type;
+        mandatory true;
+        description
+          "Space ID, identify a field space with a YANG identity 
+          reference.";
+    }
+
     leaf field-id {
       type schc:fid-type;
       mandatory true;
@@ -1230,6 +1255,12 @@ module ietf-schc {
         "Field Length, expressed in number of bits if the length is
          known when the Rule is created or through a specific
          function if the length is variable.";
+    }
+    leaf field-length-value {
+      type uint16;
+
+      description 
+      "some function length may take arguments";
     }
     leaf field-position {
       type uint8;

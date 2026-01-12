@@ -69,7 +69,7 @@ module ietf-schc {
       length.
       for instance fl-token-length is now equivalent to:
       fl-length_byte(index) where index refers to an entry-index for 
-      TKL field."
+      TKL field.";
   }
 
   revision 2025-11-24 {
@@ -715,10 +715,18 @@ module ietf-schc {
                 Section 4.5)";
   }
 
-  identity fl_length_bytes {
+  identity fl-length-bytes {
     base fl-base-type;
 
-    description "";
+    description "This function return the length a field 
+    by its index in bytes. This is a generalation of fl-token-length.";
+  }
+
+  identity fl-length-bytes {
+    base fl-base-type;
+
+    description "This function return the length in bits of a field 
+    by its index in bits. ";
   }
 
   //---------------------------------

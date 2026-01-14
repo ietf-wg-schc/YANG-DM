@@ -1706,6 +1706,7 @@ module ietf-schc {
         }
         case compression {
           if-feature "compression";
+          ordered-by user;
           uses compression-content;
         }
         description

@@ -40,13 +40,15 @@ def take_from_allocation(sid, namespace, identifier):
 
 new_items = []
 unknown_items =[]
+conversion = {}
 
-for i in range(len(sid_module["item"])):
-    item = sid_module["item"].pop(0)
+for i in range(len(sid_module["ietf-sid-file:sid-file"]["item"])):
+    item = sid_module["ietf-sid-file:sid-file"]["item"].pop(0)
     result = take_from_allocation(item["sid"], item["namespace"], item["identifier"])
     if result != None:
         #print (f"{item['identifier']:30}:{item['sid']:6} ==> {result[0]:6}")
         #print("-", item, result)
+        conversion[item["sid"]] = int(result[0])
         item["sid"] = int(result[0])
         #print("=", item)
         new_items.append(item)
@@ -54,11 +56,34 @@ for i in range(len(sid_module["item"])):
     else:
         unknown_items.append(item)
 
-sid_module["item"] = new_items
+sid_module["ietf-sid-file:sid-file"]["item"] = new_items
+
+
+
+if "key-mapping" in sid_module["ietf-sid-file:sid-file"]:
+    print("congratulation, you're using key-mapping, to get the full power of SID files")
+
+    new_km = {}
+
+    for key, values in sid_module["ietf-sid-file:sid-file"]["key-mapping"].items():
+        print (values)
+        new_values = []
+        for value in values:
+            if str(value)in conversion:
+                new_values.append(conversion[str(value)])
+            else:
+                print(f"key-mapping: {value} not found in conversion, removed")
+
+        print (key, conversion[key])
+        new_km[str(conversion[key])] = new_values
+
+    print("new km", new_km)
+    sid_module["ietf-sid-file:sid-file"]["key-mapping"] = new_km
+
 
 with open(sid_final, "w") as output_file:
         json.dump(sid_module, output_file, indent=4)
 
 if len(unknown_items) > 0:
-    print("Transposition not fully complete, unknown items:")
+    print("Transposition not fully complete, unknown items (removed for .sid):")
     pprint.pprint (unknown_items)

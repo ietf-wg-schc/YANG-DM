@@ -12,7 +12,7 @@ BASE="${MODULE}@${DATE}"
 
 git pull
 
-pyang --sid-generate-file=2550:400 --sid-list --sid-extension ${BASE}.yang
+uvx --from git+https://github.com/ltn22/pyang@sid-extension pyang --sid-generate-file=2550:400 --sid-list --sid-extension ${BASE}.yang
 uv run python3 csv2sid.py SID-mapping-${DATE}.csv ${BASE}.sid ${BASE}-mapped.sid
 
 git add SID-mapping-${DATE}.xlsx

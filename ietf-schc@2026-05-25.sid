@@ -1,0 +1,1047 @@
+{
+  "ietf-sid-file:sid-file": {
+    "module-name": "ietf-schc",
+    "module-revision": "2026-05-25",
+    "sid-file-status": "unpublished",
+    "assignment-range": [
+      {
+        "entry-point": "2550",
+        "size": "400"
+      }
+    ],
+    "item": [
+      {
+        "namespace": "module",
+        "identifier": "ietf-schc",
+        "status": "unstable",
+        "sid": "2550"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "ack-behavior-after-all-0",
+        "status": "unstable",
+        "sid": "2551"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "ack-behavior-after-all-1",
+        "status": "unstable",
+        "sid": "2552"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "ack-behavior-base-type",
+        "status": "unstable",
+        "sid": "2553"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "ack-behavior-by-layer2",
+        "status": "unstable",
+        "sid": "2554"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "all-1-data-base-type",
+        "status": "unstable",
+        "sid": "2555"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "all-1-data-no",
+        "status": "unstable",
+        "sid": "2556"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "all-1-data-sender-choice",
+        "status": "unstable",
+        "sid": "2557"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "all-1-data-yes",
+        "status": "unstable",
+        "sid": "2558"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "bitmap-RFC8724",
+        "status": "unstable",
+        "sid": "2559"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "bitmap-compound-ack",
+        "status": "unstable",
+        "sid": "2560"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "bitmap-format-base-type",
+        "status": "unstable",
+        "sid": "2561"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "cda-appiid",
+        "status": "unstable",
+        "sid": "2562"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "cda-base-type",
+        "status": "unstable",
+        "sid": "2563"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "cda-compress-sent",
+        "status": "unstable",
+        "sid": "2564"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "cda-compute",
+        "status": "unstable",
+        "sid": "2565"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "cda-deviid",
+        "status": "unstable",
+        "sid": "2566"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "cda-lsb",
+        "status": "unstable",
+        "sid": "2567"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "cda-mapping-sent",
+        "status": "unstable",
+        "sid": "2568"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "cda-not-sent",
+        "status": "unstable",
+        "sid": "2569"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "cda-rev-compress-sent",
+        "status": "unstable",
+        "sid": "2570"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "cda-value-sent",
+        "status": "unstable",
+        "sid": "2571"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "di-base-type",
+        "status": "unstable",
+        "sid": "2572"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "di-bidirectional",
+        "status": "unstable",
+        "sid": "2573"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "di-down",
+        "status": "unstable",
+        "sid": "2574"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "di-up",
+        "status": "unstable",
+        "sid": "2575"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-base-type",
+        "status": "unstable",
+        "sid": "2576"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-base-type",
+        "status": "unstable",
+        "sid": "2577"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-code",
+        "status": "unstable",
+        "sid": "2578"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-code-class",
+        "status": "unstable",
+        "sid": "2579"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-code-detail",
+        "status": "unstable",
+        "sid": "2580"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-mid",
+        "status": "unstable",
+        "sid": "2581"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-option",
+        "status": "unstable",
+        "sid": "2582"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-option-oscore-flags",
+        "status": "unstable",
+        "sid": "2583"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-option-oscore-kid",
+        "status": "unstable",
+        "sid": "2584"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-option-oscore-kidctx",
+        "status": "unstable",
+        "sid": "2585"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-option-oscore-piv",
+        "status": "unstable",
+        "sid": "2586"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-tkl",
+        "status": "unstable",
+        "sid": "2587"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-token",
+        "status": "unstable",
+        "sid": "2588"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-type",
+        "status": "unstable",
+        "sid": "2589"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-coap-version",
+        "status": "unstable",
+        "sid": "2590"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-icmpv6-base-type",
+        "status": "unstable",
+        "sid": "2591"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-icmpv6-checksum",
+        "status": "unstable",
+        "sid": "2592"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-icmpv6-code",
+        "status": "unstable",
+        "sid": "2593"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-icmpv6-identifier",
+        "status": "unstable",
+        "sid": "2594"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-icmpv6-mtu",
+        "status": "unstable",
+        "sid": "2595"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-icmpv6-payload",
+        "status": "unstable",
+        "sid": "2596"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-icmpv6-pointer",
+        "status": "unstable",
+        "sid": "2597"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-icmpv6-sequence",
+        "status": "unstable",
+        "sid": "2598"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-icmpv6-type",
+        "status": "unstable",
+        "sid": "2599"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-ipv6-appiid",
+        "status": "unstable",
+        "sid": "2600"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-ipv6-appprefix",
+        "status": "unstable",
+        "sid": "2601"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-ipv6-base-type",
+        "status": "unstable",
+        "sid": "2602"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-ipv6-deviid",
+        "status": "unstable",
+        "sid": "2603"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-ipv6-devprefix",
+        "status": "unstable",
+        "sid": "2604"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-ipv6-flowlabel",
+        "status": "unstable",
+        "sid": "2605"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-ipv6-hoplimit",
+        "status": "unstable",
+        "sid": "2606"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-ipv6-nextheader",
+        "status": "unstable",
+        "sid": "2607"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-ipv6-payload-length",
+        "status": "unstable",
+        "sid": "2608"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-ipv6-trafficclass",
+        "status": "unstable",
+        "sid": "2609"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-ipv6-trafficclass-ds",
+        "status": "unstable",
+        "sid": "2610"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-ipv6-trafficclass-ecn",
+        "status": "unstable",
+        "sid": "2611"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-ipv6-version",
+        "status": "unstable",
+        "sid": "2612"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-oscore-base-type",
+        "status": "unstable",
+        "sid": "2613"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-payload",
+        "status": "unstable",
+        "sid": "2614"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-udp-app-port",
+        "status": "unstable",
+        "sid": "2615"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-udp-base-type",
+        "status": "unstable",
+        "sid": "2616"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-udp-checksum",
+        "status": "unstable",
+        "sid": "2617"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-udp-dev-port",
+        "status": "unstable",
+        "sid": "2618"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-udp-length",
+        "status": "unstable",
+        "sid": "2619"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fid-unused",
+        "status": "unstable",
+        "sid": "2620"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fl-base-type",
+        "status": "unstable",
+        "sid": "2621"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fl-length-bits",
+        "status": "unstable",
+        "sid": "2622"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fl-length-bytes",
+        "status": "unstable",
+        "sid": "2623"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fl-remaining",
+        "status": "unstable",
+        "sid": "2624"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fl-token-length",
+        "status": "unstable",
+        "sid": "2625"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fl-variable",
+        "status": "unstable",
+        "sid": "2626"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fl-variable-bits",
+        "status": "unstable",
+        "sid": "2627"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fragmentation-mode-ack-always",
+        "status": "unstable",
+        "sid": "2628"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fragmentation-mode-ack-on-error",
+        "status": "unstable",
+        "sid": "2629"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fragmentation-mode-base-type",
+        "status": "unstable",
+        "sid": "2630"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "fragmentation-mode-no-ack",
+        "status": "unstable",
+        "sid": "2631"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "mo-base-type",
+        "status": "unstable",
+        "sid": "2632"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "mo-equal",
+        "status": "unstable",
+        "sid": "2633"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "mo-ignore",
+        "status": "unstable",
+        "sid": "2634"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "mo-match-mapping",
+        "status": "unstable",
+        "sid": "2635"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "mo-msb",
+        "status": "unstable",
+        "sid": "2636"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "mo-rev-rule-match",
+        "status": "unstable",
+        "sid": "2637"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "mo-rule-match",
+        "status": "unstable",
+        "sid": "2638"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "nature-base-type",
+        "status": "unstable",
+        "sid": "2639"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "nature-compression",
+        "status": "unstable",
+        "sid": "2640"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "nature-fragmentation",
+        "status": "unstable",
+        "sid": "2641"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "nature-management",
+        "status": "unstable",
+        "sid": "2642"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "nature-no-compression",
+        "status": "unstable",
+        "sid": "2643"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "rcs-algorithm-base-type",
+        "status": "unstable",
+        "sid": "2644"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "rcs-crc32",
+        "status": "unstable",
+        "sid": "2645"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "space-field-id-base-type",
+        "status": "unstable",
+        "sid": "2646"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "space-id-base-type",
+        "status": "unstable",
+        "sid": "2647"
+      },
+      {
+        "namespace": "identity",
+        "identifier": "space-id-coap",
+        "status": "unstable",
+        "sid": "2648"
+      },
+      {
+        "namespace": "feature",
+        "identifier": "compression",
+        "status": "unstable",
+        "sid": "2649"
+      },
+      {
+        "namespace": "feature",
+        "identifier": "fragmentation",
+        "status": "unstable",
+        "sid": "2650"
+      },
+      {
+        "namespace": "feature",
+        "identifier": "management",
+        "status": "unstable",
+        "sid": "2651"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:duplicate-rule",
+        "status": "unstable",
+        "sid": "2652"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:duplicate-rule/input",
+        "status": "unstable",
+        "sid": "2653"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:duplicate-rule/input/from",
+        "status": "unstable",
+        "sid": "2654"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:duplicate-rule/input/from/rule-id-length",
+        "status": "unstable",
+        "sid": "2655",
+        "type": "uint8"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:duplicate-rule/input/from/rule-id-value",
+        "status": "unstable",
+        "sid": "2656",
+        "type": "uint32"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:duplicate-rule/input/ipatch-sequence",
+        "status": "unstable",
+        "sid": "2657",
+        "type": "binary"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:duplicate-rule/input/to",
+        "status": "unstable",
+        "sid": "2658"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:duplicate-rule/input/to/rule-id-length",
+        "status": "unstable",
+        "sid": "2659",
+        "type": "uint8"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:duplicate-rule/input/to/rule-id-value",
+        "status": "unstable",
+        "sid": "2660",
+        "type": "uint32"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:duplicate-rule/output",
+        "status": "unstable",
+        "sid": "2661"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:duplicate-rule/output/status",
+        "status": "unstable",
+        "sid": "2662",
+        "type": {
+          "0": "success-with-validation",
+          "1": "success-not-validated",
+          "-1": "to-rule-already-exists",
+          "-2": "from-rule-not-found",
+          "-3": "invalid-ipatch"
+        }
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc",
+        "status": "unstable",
+        "sid": "2663"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule",
+        "status": "unstable",
+        "sid": "2664"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/ack-behavior",
+        "status": "unstable",
+        "sid": "2665",
+        "type": "identityref"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/bitmap-format",
+        "status": "unstable",
+        "sid": "2666",
+        "type": "identityref"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/direction",
+        "status": "unstable",
+        "sid": "2667",
+        "type": "identityref"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/dtag-size",
+        "status": "unstable",
+        "sid": "2668",
+        "type": "uint8"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry",
+        "status": "unstable",
+        "sid": "2669"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/comp-decomp-action",
+        "status": "unstable",
+        "sid": "2670",
+        "type": "identityref"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/comp-decomp-action-value",
+        "status": "unstable",
+        "sid": "2671"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/comp-decomp-action-value/index",
+        "status": "unstable",
+        "sid": "2672",
+        "type": "uint16"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/comp-decomp-action-value/value",
+        "status": "unstable",
+        "sid": "2673",
+        "type": "binary"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/direction-indicator",
+        "status": "unstable",
+        "sid": "2674",
+        "type": "identityref"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/entry-index",
+        "status": "unstable",
+        "sid": "2675",
+        "type": "uint16"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/field-id",
+        "status": "unstable",
+        "sid": "2676",
+        "type": "identityref"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/field-length",
+        "status": "unstable",
+        "sid": "2677",
+        "type": [
+          "identityref",
+          "uint8"
+        ]
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/field-length-value",
+        "status": "unstable",
+        "sid": "2678",
+        "type": "uint16"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/field-position",
+        "status": "unstable",
+        "sid": "2679",
+        "type": "uint8"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/matching-operator",
+        "status": "unstable",
+        "sid": "2680",
+        "type": "identityref"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/matching-operator-value",
+        "status": "unstable",
+        "sid": "2681"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/matching-operator-value/index",
+        "status": "unstable",
+        "sid": "2682",
+        "type": "uint16"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/matching-operator-value/value",
+        "status": "unstable",
+        "sid": "2683",
+        "type": "binary"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/space-id",
+        "status": "unstable",
+        "sid": "2684",
+        "type": "identityref"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/target-value",
+        "status": "unstable",
+        "sid": "2685"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/target-value/index",
+        "status": "unstable",
+        "sid": "2686",
+        "type": "uint16"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/target-value/value",
+        "status": "unstable",
+        "sid": "2687",
+        "type": "binary"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/entry/universal-value",
+        "status": "unstable",
+        "sid": "2688",
+        "type": "uint64"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/fcn-size",
+        "status": "unstable",
+        "sid": "2689",
+        "type": "uint8"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/fragmentation-mode",
+        "status": "unstable",
+        "sid": "2690",
+        "type": "identityref"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/inactivity-timer",
+        "status": "unstable",
+        "sid": "2691"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/inactivity-timer/ticks-duration",
+        "status": "unstable",
+        "sid": "2692",
+        "type": "uint8"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/inactivity-timer/ticks-numbers",
+        "status": "unstable",
+        "sid": "2693",
+        "type": "uint16"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/l2-word-size",
+        "status": "unstable",
+        "sid": "2694",
+        "type": "uint8"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/last-bitmap-compression",
+        "status": "unstable",
+        "sid": "2695",
+        "type": "boolean"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/max-ack-requests",
+        "status": "unstable",
+        "sid": "2696",
+        "type": "uint8"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/max-interleaved-frames",
+        "status": "unstable",
+        "sid": "2697",
+        "type": "uint8"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/maximum-packet-size",
+        "status": "unstable",
+        "sid": "2698",
+        "type": "uint16"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/rcs-algorithm",
+        "status": "unstable",
+        "sid": "2699",
+        "type": "identityref"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/retransmission-timer",
+        "status": "unstable",
+        "sid": "2700"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/retransmission-timer/ticks-duration",
+        "status": "unstable",
+        "sid": "2701",
+        "type": "uint8"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/retransmission-timer/ticks-numbers",
+        "status": "unstable",
+        "sid": "2702",
+        "type": "uint16"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/rule-id-length",
+        "status": "unstable",
+        "sid": "2703",
+        "type": "uint8"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/rule-id-value",
+        "status": "unstable",
+        "sid": "2704",
+        "type": "uint32"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/rule-nature",
+        "status": "unstable",
+        "sid": "2705",
+        "type": "identityref"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/tile-in-all-1",
+        "status": "unstable",
+        "sid": "2706",
+        "type": "identityref"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/tile-size",
+        "status": "unstable",
+        "sid": "2707",
+        "type": "uint8"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/w-size",
+        "status": "unstable",
+        "sid": "2708",
+        "type": "uint8"
+      },
+      {
+        "namespace": "data",
+        "identifier": "/ietf-schc:schc/rule/window-size",
+        "status": "unstable",
+        "sid": "2709",
+        "type": "uint16"
+      }
+    ],
+    "key-mapping": {
+      "2664": [
+        2704,
+        2703
+      ],
+      "2669": [
+        2675
+      ],
+      "2685": [
+        2686
+      ],
+      "2681": [
+        2682
+      ],
+      "2671": [
+        2672
+      ]
+    }
+  }
+}

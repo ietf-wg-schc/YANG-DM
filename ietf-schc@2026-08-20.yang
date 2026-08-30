@@ -58,7 +58,23 @@ module ietf-schc {
 
   revision 2026-08-20 {
     description
-      "Prise en compte de la branche kudos.";
+      "Add kudos FID defined in draft-ietf-core-oscore-key-update.
+       Restore the twenty per-CoAP-option FIDs (fid-coap-option-*)
+       that had been removed in an earlier revision, marking them
+       'status deprecated' instead of deleting them, per RFC 7950
+       Section 11 ('Obsolete definitions MUST NOT be removed from
+       published modules') and RFC 8407 Section 4.7 (an object
+       SHOULD stay 'deprecated' for at least one year before moving
+       to 'obsolete'). They are superseded by Universal Options
+       (space-id-coap / universal-value). Rename the '-v2'
+       compression-rule-entry/compression-content/case suffix to
+       '-universal'. Fix the space-id-coap identity description and
+       reference, mistakenly copy-pasted from fid-ipv6-*. Remove the
+       unused fid-oscore-base-type identity: it was never used as a
+       base by any other identity (the OSCORE suboption FIDs derive
+       directly from fid-coap-option) and was never part of a
+       published RFC, so it can simply be dropped rather than
+       deprecated.";
   }
 
   revision 2026-05-07 {
@@ -409,16 +425,209 @@ module ietf-schc {
       "RFC 7252 The Constrained Application Protocol (CoAP)";
   }
 
-  identity fid-oscore-base-type {
+  identity fid-coap-option-if-match {
     base fid-coap-option;
+    status deprecated;
     description
-      "OSCORE options (RFC8613) split in suboptions.
-      This option overload the Universal Option descriptions.
-      The purpose of this leaf is to introduce a hierachy in typing
-      the sub-options of OSCORE. This leaf SHOULD NOT be used directly.";
+      "CoAP option If-Match. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 1).";
     reference
-      "RFC 8824 Static Context Header Compression (SCHC) for the
-                Constrained Application Protocol (CoAP)";
+      "RFC 7252 The Constrained Application Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-uri-host {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option Uri-Host. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 3).";
+    reference
+      "RFC 7252 The Constrained Application Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-etag {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option ETag. Deprecated in favor of Universal Options
+       (space-id-coap / universal-value = 4).";
+    reference
+      "RFC 7252 The Constrained Application Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-if-none-match {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option if-none-match. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 5).";
+    reference
+      "RFC 7252 The Constrained Application Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-observe {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option Observe. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 6).";
+    reference
+      "RFC 7641 Observing Resources in the Constrained Application
+                Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-uri-port {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option Uri-Port. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 7).";
+    reference
+      "RFC 7252 The Constrained Application Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-location-path {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option Location-Path. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 8).";
+    reference
+      "RFC 7252 The Constrained Application Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-uri-path {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option Uri-Path. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 11).";
+    reference
+      "RFC 7252 The Constrained Application Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-content-format {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option Content Format. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 12).";
+    reference
+      "RFC 7252 The Constrained Application Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-max-age {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option Max-Age. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 14).";
+    reference
+      "RFC 7252 The Constrained Application Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-uri-query {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option Uri-Query. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 15).";
+    reference
+      "RFC 7252 The Constrained Application Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-accept {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option Accept. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 17).";
+    reference
+      "RFC 7252 The Constrained Application Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-location-query {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option Location-Query. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 20).";
+    reference
+      "RFC 7252 The Constrained Application Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-block2 {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option Block2. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 23).";
+    reference
+      "RFC 7959 Block-Wise Transfers in the Constrained Application
+                Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-block1 {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option Block1. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 27).";
+    reference
+      "RFC 7959 Block-Wise Transfers in the Constrained Application
+                Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-size2 {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option Size2. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 28).";
+    reference
+      "RFC 7959 Block-Wise Transfers in the Constrained Application
+                Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-proxy-uri {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option Proxy-Uri. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 35).";
+    reference
+      "RFC 7252 The Constrained Application Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-proxy-scheme {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option Proxy-Scheme. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 39).";
+    reference
+      "RFC 7252 The Constrained Application Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-size1 {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option Size1. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 60).";
+    reference
+      "RFC 7252 The Constrained Application Protocol (CoAP)";
+  }
+
+  identity fid-coap-option-no-response {
+    base fid-coap-option;
+    status deprecated;
+    description
+      "CoAP option No response. Deprecated in favor of Universal
+       Options (space-id-coap / universal-value = 258).";
+    reference
+      "RFC 7967 Constrained Application Protocol (CoAP) Option for
+                No Server Response";
   }
 
   identity fid-coap-option-oscore-flags {
@@ -431,10 +640,32 @@ module ietf-schc {
                 Section 6.4)";
   }
 
+   identity fid-coap-option-oscore-flags-flags {
+    base fid-coap-option-oscore-flags;
+    description
+      "First 5 bits of the OSCORE flags field forming flags subfield.";
+    reference
+      "RFC 8824 Static Context Header Compression (SCHC) for the
+                Constrained Application Protocol (CoAP) (see
+                Section 6.4)";
+  }
+
+  identity fid-coap-option-oscore-flags-n {
+    base fid-coap-option-oscore-flags;
+    description
+      "last 3 bits of the OSCORE flags field giving the length 
+      of Partial IV.";
+    reference
+      "RFC 8824 Static Context Header Compression (SCHC) for the
+                Constrained Application Protocol (CoAP) (see
+                Section 6.4)";
+  }
+
+
   identity fid-coap-option-oscore-piv {
     base fid-coap-option;
     description
-      "CoAP option OSCORE flags.";
+      "CoAP option OSCORE Partial IV.";
     reference
       "RFC 8824 Static Context Header Compression (SCHC) for the
                 Constrained Application Protocol (CoAP) (see
@@ -444,7 +675,7 @@ module ietf-schc {
   identity fid-coap-option-oscore-kid {
     base fid-coap-option;
     description
-      "CoAP option OSCORE flags.";
+      "CoAP option OSCORE Key ID.";
     reference
       "RFC 8824 Static Context Header Compression (SCHC) for the
                 Constrained Application Protocol (CoAP) (see
@@ -454,12 +685,48 @@ module ietf-schc {
   identity fid-coap-option-oscore-kidctx {
     base fid-coap-option;
     description
-      "CoAP option OSCORE flags.";
+      "CoAP option OSCORE Key ID Context.";
     reference
       "RFC 8824 Static Context Header Compression (SCHC) for the
                 Constrained Application Protocol (CoAP)(see
                 Section 6.4)";
   }
+
+  identity fid-coap-option-kudos-x {
+    base fid-coap-option;
+    description
+      "x field contained in the kudos option defined in 
+      draft-ietf-core-oscore-key-update.";
+    reference
+      "draft-ietf-core-oscore-key-update";
+  }
+
+  identity fid-coap-option-kudos-x-flags {
+    base fid-coap-option-kudos-x;
+    description
+      "4 first bits of the x field in the kudos option defined in 
+      draft-ietf-core-oscore-key-update.";
+    reference
+      "draft-ietf-core-oscore-key-update";
+  }
+
+  identity fid-coap-option-kudos-x-m {
+    base fid-coap-option-kudos-x;
+    description
+      "4 last bits of the x field in the kudos option defined in 
+      draft-ietf-core-oscore-key-update.";
+    reference
+      "draft-ietf-core-oscore-key-update";
+  }
+
+  identity fid-coap-option-kudos-nonce {
+    base fid-coap-option;
+    description
+      "CoAP option kudos carrying the nonce.";
+    reference
+      "draft-ietf-core-oscore-key-update";
+  }
+
 
  identity fid-icmpv6-base-type {
    base schc:fid-base-type;
@@ -529,15 +796,17 @@ module ietf-schc {
   identity space-id-base-type {
     base schc:space-field-id-base-type;
     description
-      "Field ID base type for all fields.";
+      "Base identity for a Universal Option space. Several
+       protocols define options (e.g. CoAP); each such protocol
+       is identified by an identity derived from this base type.";
   }
 
   identity space-id-coap {
     base space-id-base-type;
     description
-      "Field ID base type for IPv6 headers described in RFC 8200.";
+      "Space ID identifying the CoAP option space.";
     reference
-      "RFC 8200 Internet Protocol, Version 6 (IPv6) Specification";
+      "RFC 7252 The Constrained Application Protocol (CoAP)";
   }
 
   //----------------------------------
@@ -1088,11 +1357,150 @@ module ietf-schc {
   }
 
   grouping compression-rule-entry {
+    status deprecated;
+    description
+      "These entries define a compression entry (i.e., a line),
+       as defined in RFC 8724.
+ +-------+--+--+--+------------+-----------------+---------------+
+ |Field 1|FL|FP|DI|Target Value|Matching Operator|Comp/Decomp Act|
+ +-------+--+--+--+------------+-----------------+---------------+
+       An entry in a compression Rule is composed of 7 elements:
+       - Field ID: the header field to be compressed
+       - Field Length : either a positive integer or a function
+       - Field Position: a positive (and possibly equal to 0)
+         integer
+       - Direction Indicator: an indication in which direction the
+         compression and decompression process is effective
+       - Target Value: a value against which the header field is
+         compared
+       - Matching Operator: the comparison operation and optional
+         associate parameters
+       - Comp./Decomp. Action: the compression or decompression
+         action and optional parameters
+
+       Deprecated in favor of 'compression-rule-entry-universal', which
+       adds support for Universal Options.";
+    reference
+      "RFC 9363 A YANG Data Model for Static Context Header
+                Compression (SCHC)";
+    leaf field-id {
+      type schc:fid-type;
+      mandatory true;
+      description
+        "Field ID, identify a field in the header with a YANG
+         identity reference.";
+    }
+    leaf field-length {
+      type union {
+      type uint8;
+      type schc:fl-type;
+        }
+      mandatory true;
+      description
+        "Field Length, expressed in number of bits if the length is
+         known when the Rule is created or through a specific
+         function if the length is variable.";
+    }
+    leaf field-position {
+      type uint8;
+      mandatory true;
+      description
+        "Field Position in the header is an integer.  Position 1
+         matches the first occurrence of a field in the header,
+         while incremented position values match subsequent
+         occurrences.
+         Position 0 means that this entry matches a field
+         irrespective of its position of occurrence in the
+         header.
+         Be aware that the decompressed header may have
+         position-0 fields ordered differently than they
+         appeared in the original packet.";
+    }
+    leaf direction-indicator {
+      type schc:di-type;
+      mandatory true;
+      description
+        "Direction Indicator, indicate if this field must be
+         considered for Rule selection or ignored based on the
+         direction (bidirectional, only uplink, or only
+         downlink).";
+    }
+    list target-value {
+      key "index";
+      uses tv-struct;
+      description
+        "A list of values to compare with the header field value.
+         If Target Value is a singleton, position must be 0.
+         For use as a matching list for the mo-match-mapping Matching
+         Operator, index should take consecutive values starting
+         from 0.";
+    }
+    leaf matching-operator {
+      type schc:mo-type;
+      must "../target-value or derived-from-or-self(.,
+                                                   'mo-ignore')" {
+        error-message
+          "mo-equal, mo-msb, and mo-match-mapping need target-value";
+        description
+          "target-value is not required for mo-ignore.";
+      }
+      must "not (derived-from-or-self(., 'mo-msb')) or
+            ../matching-operator-value" {
+        error-message "mo-msb requires length value";
+      }
+      mandatory true;
+      description
+        "MO: Matching Operator.";
+      reference
+        "RFC 8724 SCHC: Generic Framework for Static Context Header
+                  Compression and Fragmentation (see Section 7.3)";
+    }
+    list matching-operator-value {
+      key "index";
+      uses tv-struct;
+      description
+        "Matching Operator Arguments, based on TV structure to allow
+         several arguments.
+         In RFC 8724, only the MSB Matching Operator needs arguments
+         (a single argument, which is the number of most significant
+         bits to be matched).";
+    }
+    leaf comp-decomp-action {
+      type schc:cda-type;
+      must "../target-value or
+                derived-from-or-self(., 'cda-value-sent') or
+                derived-from-or-self(., 'cda-compute') or
+                derived-from-or-self(., 'cda-appiid') or
+                derived-from-or-self(., 'cda-deviid')" {
+        error-message
+          "cda-not-sent, cda-lsb, and cda-mapping-sent need
+           target-value";
+        description
+          "target-value is not required for some CDA.";
+      }
+      mandatory true;
+      description
+        "CDA: Compression Decompression Action.";
+      reference
+        "RFC 8724 SCHC: Generic Framework for Static Context Header
+                  Compression and Fragmentation (see Section 7.4)";
+    }
+    list comp-decomp-action-value {
+      key "index";
+      uses tv-struct;
+      description
+        "CDA arguments, based on a TV structure, in order to allow
+         for several arguments.  The CDAs specified in RFC 8724
+         require no argument.";
+    }
+  }
+
+  grouping compression-rule-entry-universal {
     description
       "These entries define a compression entry (i.e., a line),
        as defined in RFC 8724. The format has been generalized
        to include universal options.
- 
+
        An entry in a compression Rule is composed of 7 elements:
        - entry-index: position in the rule.
        - space field ID: the identityref of a specific field or 
@@ -1337,7 +1745,36 @@ module ietf-schc {
   }
 
   grouping compression-content {
+    status deprecated;
     list entry {
+      status deprecated;
+      must "derived-from-or-self(../rule-nature,
+                                        'nature-compression')" {
+        error-message "Rule nature must be compression";
+      }
+      key "field-id field-position direction-indicator";
+
+      uses compression-rule-entry {
+        status deprecated;
+      }
+      description
+        "A compression Rule is a list of Rule entries, each
+         describing a header field.  An entry is identified
+         through a field-id, its position in the packet, and
+         its direction.";
+    }
+
+    description
+      "Define a compression Rule composed of a list of entries.
+       Deprecated in favor of 'compression-content-universal', which
+       adds support for Universal Options.";
+    reference
+      "RFC 9363 A YANG Data Model for Static Context Header
+                Compression (SCHC)";
+  }
+
+  grouping compression-content-universal {
+    list entry-universal {
       must "derived-from-or-self(../rule-nature,
                                         'nature-compression')" {
         error-message "Rule nature must be compression";
@@ -1345,16 +1782,16 @@ module ietf-schc {
       key "entry-index";
       ordered-by user;
 
-      uses compression-rule-entry;
+      uses compression-rule-entry-universal;
       description
         "A compression Rule is a list of Rule entries, each
-         describing a header field.  An entry is identified
-         through a field-id, its position in the packet, and
-         its direction.";
+         describing a header field or Universal Option. An entry
+         is identified by its entry-index.";
     }
- 
+
     description
-      "Define a compression Rule composed of a list of entries.";
+      "Define a compression Rule composed of a list of entries,
+       using the Universal-Option-aware 'compression-rule-entry-universal'.";
     reference
       "RFC 8724 SCHC: Generic Framework for Static Context Header
                 Compression and Fragmentation";
@@ -1655,8 +2092,15 @@ module ietf-schc {
           uses fragmentation-content;
         }
         case compression {
+          status deprecated;
           if-feature "compression";
-          uses compression-content;
+          uses compression-content {
+            status deprecated;
+          }
+        }
+        case compression-universal {
+          if-feature "compression";
+          uses compression-content-universal;
         }
         description
           "A Rule is for compression, for no-compression, or for

@@ -49,7 +49,7 @@ for i in range(len(sid_module["ietf-sid-file:sid-file"]["item"])):
         #print (f"{item['identifier']:30}:{item['sid']:6} ==> {result[0]:6}")
         #print("-", item, result)
         conversion[item["sid"]] = int(result[0])
-        item["sid"] = int(result[0])
+        item["sid"] = str(int(result[0]))
         #print("=", item)
         new_items.append(item)
         #pprint.pprint(new_items)
@@ -57,6 +57,16 @@ for i in range(len(sid_module["ietf-sid-file:sid-file"]["item"])):
         unknown_items.append(item)
 
 sid_module["ietf-sid-file:sid-file"]["item"] = new_items
+
+for item in new_items:
+    if "ietf-sid-file-extension:keys" in item:
+        new_keys = []
+        for value in item["ietf-sid-file-extension:keys"]:
+            if str(value) in conversion:
+                new_keys.append(str(conversion[str(value)]))
+            else:
+                print(f"keys: {value} not found in conversion, removed")
+        item["ietf-sid-file-extension:keys"] = new_keys
 
 
 
@@ -79,6 +89,12 @@ if "key-mapping" in sid_module["ietf-sid-file:sid-file"]:
 
     print("new km", new_km)
     sid_module["ietf-sid-file:sid-file"]["key-mapping"] = new_km
+
+
+description = sid_module["ietf-sid-file:sid-file"].get("description", "")
+if description:
+    description += ", "
+sid_module["ietf-sid-file:sid-file"]["description"] = description + f"SIDs manually allocated from {csv_name}"
 
 
 with open(sid_final, "w") as output_file:
